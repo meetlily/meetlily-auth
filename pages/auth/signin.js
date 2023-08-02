@@ -26,19 +26,19 @@ export default function SignInForm({ providers }) {
   
     return (
       <>
-        <form onSubmit={handleSubmit}>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
-                <button type="submit">Sign In</button>
-            </form>
-            <div>
-                {Object.values(providers).map((provider) => (
-                    <div key={provider.id}>
-                        <button onClick={() => signIn(provider.id)}>Sign in with {provider.name}</button>
-                    </div>
-                ))}
-            </div>
-        </>
+          <form onSubmit={handleSubmit}>
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
+              <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
+              <button type="submit">Sign In</button>
+          </form>
+          <div>
+              {Object.values(providers).map((provider) => (
+                  <div key={provider.id}>
+                      <button onClick={() => signIn(provider.id)}>Sign in with {provider.name}</button>
+                  </div>
+              ))}
+          </div>
+      </>
     );
   }
 
