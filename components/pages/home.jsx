@@ -11,9 +11,6 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid'
-import { getComponentTemplateById, saveComponentTemplate } from '../../prisma/models/componentTemplate';
-
-
 
 export const loader = async ({ request }) => {
   
