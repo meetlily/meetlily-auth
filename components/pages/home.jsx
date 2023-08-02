@@ -11,48 +11,15 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid'
+import { useSession, signIn, signOut } from "next-auth/react";
+
 
 export const loader = async ({ request }) => {
   
   //const pageListItems = await getPageListItems();
   //return json({ pageListItems });
 };
-const navigation = [
-  { name: 'About', href: '#' }
-]
-const features = [
-  {
-    name: 'Mobile App for Sustainable Living',
-    description: 'Create an interactive mobile application that encourages and educates users about sustainable practices in daily life. Include features like carbon footprint tracking, tips for reducing waste, and a community forum for sharing ideas and success stories.',
-    icon: CloudUploadIcon,
-  },
-  {
-    name: 'SSL Certificates',
-    description: 'SSL (Secure Socket Layer) certificates are digital certificates that establish a secure encrypted connection between a user\'s browser and a web server. ',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Simple Queues',
-    description: 'Simple queues are a fundamental data structure that follows the First-In-First-Out (FIFO) principle. In simple terms, they are a linear collection where new elements are added to the back and removal happens from the front.',
-    icon: RefreshIcon,
-  },
-  {
-    name: 'Advanced Security',
-    description: 'Advanced security refers to the implementation of robust measures, technologies, and strategies to protect digital systems, networks, and data from sophisticated cyber threats, ensuring confidentiality, integrity, and availability.',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Powerful API',
-    description:
-      'A powerful API (Application Programming Interface) allows software applications to seamlessly communicate and interact with each other, enabling efficient data exchange, integration, and functionality expansion for developers and users.',
-    icon: CogIcon,
-  },
-  {
-    name: 'Database Backups',
-    description: 'Database backups are essential measures that create copies of a database\'s data, ensuring its protection against data loss, corruption, or system failures. Backups safeguard critical information and enable recovery in case of emergencies.',
-    icon: ServerIcon,
-  },
-]
+const navigation = []
 const blogPosts = [
   {
     id: 1,
@@ -114,28 +81,27 @@ const blogPosts = [
 ]
 const footerNavigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+    // { name: 'Marketing', href: '#' },
+    // { name: 'Analytics', href: '#' },
+    // { name: 'Commerce', href: '#' },
+    // { name: 'Insights', href: '#' },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+    // { name: 'Pricing', href: '#' },
+    // { name: 'Documentation', href: '#' },
+    // { name: 'Guides', href: '#' },
+    // { name: 'API Status', href: '#' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    //{ name: 'About', href: '#' },
+    // { name: 'Blog', href: '#' },
+    // { name: 'Jobs', href: '#' },
+    // { name: 'Press', href: '#' },
+    // { name: 'Partners', href: '#' },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: 'Privacy', href: '/privacy'},
+    { name: 'Terms', href: '/terms' },
   ],
   social: [
     {
@@ -190,7 +156,7 @@ const footerNavigation = {
 }
 
 export default function HomePage() {
-  //const user = useOptionalUser();
+  const { data: session } = useSession()
 
   return (
     <div className="bg-white">
