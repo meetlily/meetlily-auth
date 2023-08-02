@@ -2,6 +2,15 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../nextjs-corporate-starter"
+		},
+		{
+			"path": "../meetlily-scripts"
+		},
+		{
+			"path": "../sls-app"
 		}
 	],
 	"settings": {

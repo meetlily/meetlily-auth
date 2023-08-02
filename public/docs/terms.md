@@ -1,4 +1,4 @@
-## Terms and Conditions for Meetlily
+# Terms and Conditions for Meetlily
 
 Effective Date: August 02, 2023
 

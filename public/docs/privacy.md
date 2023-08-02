@@ -1,4 +1,4 @@
-## Privacy Policy for Meetlily
+# Privacy Policy for Meetlily
 
 Effective Date: August 02, 2023
 
